@@ -1,55 +1,56 @@
-import java.io*;
-Import java.util*;
-Import java.util.Scanner;
 
-Kiosk.java
+import java.util.Scanner;
 
 public class Kiosk
 {
-    public static void main(String[] args){
-         String store = “walmart”;
-         System.out.println(“\t Welcome to” + “ “ + store + “!”);
-         System.out.println(“\t Happy Halloween! It’s spooky season!”);
-         String item = “oranges”;
-         String item2 = “can of soup”;
-         String item3 = “frozen hamburger”;
-         String item4 = “vegetables”;
-         String item5 = “clothes”;
-         int qty;
-         int qty2;
-         int qty3;
-         int qty4;
-         int qty5;
-         double price = 0.50;
-         double price2 = 1.25;
-         double price3 = 1.50;
-         double price4 = 2.25;
-         double price5 = 3.00;
-         double tax = 0.07;
-         Scanner getqty = new Scanner(System.in);
-         double subtot;
-         double tot;
-         do{
-                  System.out.print(“oranges qty?”);
-                  qty = getqty.nextInt();
-                  System.out.print(“soups qty?”);
-                  qty2 = getqty.nextInt();
-                  System.out.print(“burgers qty?”);
-                  qty3 = getqty.nextInt();
-                  System.out.print(“vegetables qty?”);
-                  qty4 = getqty.nextInt();
-                  System.out.print(“clothes qty?”);
-                  qty5 = getqty.nextInt();
-             }while(qty>9|| qty2>9 || qty3>9 || qty4>9|| qty5>9)
-          public void returnsubandtot()
-        {
-              subtot = sub1+sub2+sub3+sub4+sub5;
-              tot = subtot +(subtot*tax);
+ 
+    public static void main(String[] args)
+     {
+       String store = "Walmart";
+       System.out.println("\t Welcome to" + " " + store "!");
+       int []qty = new int[5];
+       String []items = new String[5];
+       double tax = 0.07;
+       int price = 1;
+       int price2= 2;
+       int price3 = 3;
+       int price4 = 4;
+       int price5=5;
+       int qtys;
+       String item;
+       double total;
 
-        }
+       int subtotal;
+        //declare all arrays, tax percentage, and also quantity and items
+        
 
-        public class Printer{
-           Kiosk store = Kiosk();
-           store.main();
-        }
+       for(int x =0; x<5; x++)//Loops the length of the items array. Asks user input five times for item names and stores the responses in the array
+       { 
+          Scanner getitem = new Scanner(System.in);
+          
 
+          System.out.print("What do you want to buy?");
+
+          item = getitem.nextLine();
+          
+      
+          items[x]=item;
+       }
+       for(int i =0; i<5; i++) //Does the same thing as previous loop but stores qtys inputs into array qty
+       {
+          Scanner scan = new Scanner(System.in);
+          System.out.print("How many" +items[i]+ "you want?");
+          qtys = scan.nextInt();
+          qty[i] = qtys;
+          
+          
+       }
+       subtotal = (qty[0]*price + qty[1]*price2+qty[2]*price3+qty[3]*price4 + qty[4]*price5);
+       total = subtotal + (subtotal * tax);
+       
+       
+
+    }
+
+
+}
