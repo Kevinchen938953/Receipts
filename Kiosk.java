@@ -1,6 +1,8 @@
 
 
+
 import java.util.Scanner;
+
 
 public class Kiosk
 {
@@ -8,7 +10,7 @@ public class Kiosk
     public static void main(String[] args)
      {
        int []qty = new int[5];
-       String []items = new String[5];//initialize item and quantity arrays
+       String []items = new String[5];
        double tax = 0.07;
        double price = 1.25;
        double price2= 2.2;
@@ -18,7 +20,11 @@ public class Kiosk
        int qtys;
        String item;
        double total;
- 
+       Printer print = new Printer();
+       print.printreceipt();// initialize and call method from printer class
+       
+       
+
 
        double subtotal;
         //declare all arrays, tax percentage, and also quantity and items
@@ -46,17 +52,17 @@ public class Kiosk
             System.out.print("How many" + " " + items[i]+ " " + "you want?");
             qtys = scan.nextInt();
             qty[i] = qtys;
-          }while(qty[0]>9 || qty[1]>9 || qty[2]>9 || qty[3]>9 || qty[4]>9);//limits the inputs to less than 9 of each item
+          }while(qty[0]>9 || qty[1]>9 || qty[2]>9 || qty[3]>9 || qty[4]>9);
           
           
        }
        
       
 
-       subtotal = (qty[0]*price + qty[1]*price2+qty[2]*price3+qty[3]*price4 + qty[4]*price5);//calculates subtotal
-       System.out.print(subtotal);
-       total = subtotal + (subtotal*tax);//calculates total with added tax of seven percent
-       
+       subtotal = (qty[0]*price + qty[1]*price2+qty[2]*price3+qty[3]*price4 + qty[4]*price5);
+       System.out.println(subtotal);
+       total = subtotal + (subtotal*tax);
+      
        
 
     }
