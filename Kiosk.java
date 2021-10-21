@@ -52,14 +52,14 @@ public class Kiosk
             System.out.print("How many" + " " + items[i]+ " " + "you want?");
             qtys = scan.nextInt();
             qty[i] = qtys;
-          }while(qty[0]>9 || qty[1]>9 || qty[2]>9 || qty[3]>9 || qty[4]>9);
+          }while(qty[0]>9 || qty[1]>9 || qty[2]>9 || qty[3]>9 || qty[4]>9);//limits the input to less than 9
           
           
        }
        
       
 
-       subtotal = (qty[0]*price + qty[1]*price2+qty[2]*price3+qty[3]*price4 + qty[4]*price5);
+       subtotal = (qty[0]*price + qty[1]*price2+qty[2]*price3+qty[3]*price4 + qty[4]*price5);//calculates subtotals
        System.out.println(subtotal);
        total = subtotal + (subtotal*tax);
       
