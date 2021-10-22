@@ -3,8 +3,8 @@ import java.util.Scanner;
 
 public class Printer
 {
-   private int []qty;
-   private String []items;
+   private int[] qty;
+   private String[] items;
    private double tax = 0.07;
    private double price = 1.25;
    private double price2= 2.2;
@@ -13,24 +13,24 @@ public class Printer
    private double price5=5.5;
    private double subtotal;
    private double total;
-   public Printer(int[]quantity, String[]stuffname, double Ttax, double Price, double Price2, double Price3, double Price4, double Price5, double Total, double Subtotal)
+   public Printer(int[] quantity, String[] stuffname, double Ttax, double Price, double Price2, double Price3, double Price4, double Price5, double Total, double Subtotal)
    {
       qty=quantity;
       items = stuffname;
-      tax = tTax;
+      tax = Ttax;
       price = Price;
       price2 = Price2;
       price3 = Price3;
       price4 = Price4;
       price5 = Price5;
-      Total = total;
-      Subtotal = subtotal;
+      total = Total;
+      subtotal = Subtotal;
       
    }
    
    public void printreceipt()//method prints out header, qty, items, and price section 
    {
-      public 
+      
       System.out.println("\t **************************************** ");
       System.out.print("\n");
       System.out.println("\t \t" + " " +"Walmart of West Chester Ohio"); 
