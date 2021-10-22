@@ -37,7 +37,10 @@ public class Printer
       System.out.print("\n");
 
       System.out.println("\t Qty \t Items \t \t" + " " + "\t Price");
-      System.out.println("\t"+ qty[0] + "\t"+items[0]);
+      for(int i =0; i<5; i++)
+      {
+         System.out.println("\t" + qty[i] + "\t" + items[i]);
+      }
       System.out.print("\t **************************************** ");
       //next steps involve carrying over variables from the Kiosk file putting those into the printer file
       
