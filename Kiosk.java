@@ -11,7 +11,7 @@ public class Kiosk
      {
        System.out.println("\t Welcome to Walmart of West Chester!");
        System.out.print("\n");
-       System.out.println("\t It's Spooky Season! Get your savings on!");
+       System.out.println("\t It's Spooky Season! Get your savings on!");//User interface
        int []qty = new int[5];
        String []items = new String[5];
        double tax = 0.07;
