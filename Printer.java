@@ -12,11 +12,9 @@ public class Printer
       System.out.print("\n");
 
       System.out.println("\t Qty \t Items \t \t" + " " + "\t Price");
+      System.out.println("")
       System.out.print("\t **************************************** ");
       
 
-
-   }
-
-
+     }
 }
