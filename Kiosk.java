@@ -15,11 +15,8 @@ public class Kiosk
        int []qty = new int[5];
        String []items = new String[5];
        double tax = 0.07;
-       double price = 1.25;
-       double price2= 2.2;
-       double price3 = 3.3;
-       double price4 = 4.4;
-       double price5=5.5;
+       double []price = new double[5];
+       double Pricespe;
        int qtys;
        String item;
        double total;
@@ -46,6 +43,15 @@ public class Kiosk
       
           items[x]=item;
        }
+       for(int n =0; n<5; n++)
+       {
+		   Scanner getprice = new Scanner(System.in);
+		   System.out.print("What's the price of" + " " +item[i]);
+		   Pricespe = getprice.nextDouble();
+		   price[n] = Pricespe;
+		}
+		   
+		   
        for(int i =0; i<5; i++) //Does the same thing as previous loop but stores qtys inputs into array qty
        {
           do
@@ -60,11 +66,14 @@ public class Kiosk
        }
        
       
-
-       subtotal = (qty[0]*price + qty[1]*price2+qty[2]*price3+qty[3]*price4 + qty[4]*price5);//calculates subtotals
-       System.out.println(subtotal);
-       total = subtotal + (subtotal*tax);
-       Printer print = new Printer(qty, items, tax, price, price2, price3, price4, price5, total, subtotal);
+       for (int t =0; t<5; t++)
+       {
+		   
+           subtotal = (qty[t]*price[t]+=qty[t+1]*price[t+1]);//calculates subtotals
+           System.out.println(subtotal);
+           total = subtotal + (subtotal*tax);
+       }
+       Printer print = new Printer(qty, items, tax, price, total, subtotal);
        print.printreceipt();// initialize and call method from printer class
       
        
