@@ -23,8 +23,7 @@ public class Kiosk
        int qtys;
        String item;
        double total;
-       Printer print = new Printer();
-       print.printreceipt();// initialize and call method from printer class
+     
        
        
 
@@ -65,6 +64,8 @@ public class Kiosk
        subtotal = (qty[0]*price + qty[1]*price2+qty[2]*price3+qty[3]*price4 + qty[4]*price5);//calculates subtotals
        System.out.println(subtotal);
        total = subtotal + (subtotal*tax);
+       Printer print = new Printer(qty, items, tax, price, price2, price3, price4, price5, total, subtotal);
+       print.printreceipt();// initialize and call method from printer class
       
        
 
