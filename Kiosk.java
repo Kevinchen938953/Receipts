@@ -20,12 +20,13 @@ public class Kiosk
        int qtys;
        String item;
        double total;
+       
      
        
        
 
 
-       double subtotal;
+       double subtotal=0;
         //declare all arrays, tax percentage, and also quantity and items
        String store = "Walmart";
        System.out.println("\t Welcome to" + " " + store + "!");
@@ -46,7 +47,7 @@ public class Kiosk
        for(int n =0; n<5; n++)
        {
 		   Scanner getprice = new Scanner(System.in);
-		   System.out.print("What's the price of" + " " +item[i]);
+		   System.out.print("What's the price of" + " " +items[n]);
 		   Pricespe = getprice.nextDouble();
 		   price[n] = Pricespe;
 		}
@@ -65,15 +66,11 @@ public class Kiosk
           
        }
        
-      
-       for (int t =0; t<5; t++)
-       {
-		   
-           subtotal = (qty[t]*price[t]+=qty[t+1]*price[t+1]);//calculates subtotals
-           System.out.println(subtotal);
-           total = subtotal + (subtotal*tax);
-       }
-       Printer print = new Printer(qty, items, tax, price, total, subtotal);
+       subtotal = qty[0]*price[0]+qty[1]*price[1]+qty[2]*price[2]+qty[3]*price[3]+qty[4]*price[4];// calculates the subtotal
+       
+       System.out.println(subtotal);
+       total = subtotal + (subtotal*tax);
+       Printer print = new Printer(qty, items, tax, price, total, subtotal);//Brings variables from Printer java
        print.printreceipt();// initialize and call method from printer class
       
        
