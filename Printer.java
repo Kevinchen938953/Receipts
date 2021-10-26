@@ -34,7 +34,8 @@ public class Printer
       System.out.print("\n");
       for(int i =0; i<5; i++)
       {
-         System.out.println(" " + "\t" + qty[i] + "\t" + items[i] + "\t" + " " + "$" + String.format("%.2f", price[i]*qty[i]));//Prints out the amount of items bought, the item name, and the item subtotal
+         System.out.println(" " + "\t" + qty[i] + "\t" + items[i] + "\t" + " " +  " " + " " + " " +  " " + " " + " " + " " + " " + " "  + " " +"$" + String.format("%.2f", price[i]*qty[i]));//Prints out the amount of items bought, the item name, and the item subtotal
+         
          System.out.print("\n");
       }
       System.out.print("\n");
