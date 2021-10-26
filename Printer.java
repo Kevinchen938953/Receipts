@@ -1,4 +1,6 @@
 
+
+
 import java.util.Scanner;
 
 public class Printer
@@ -29,15 +31,16 @@ public class Printer
       System.out.print("\n");
 
       System.out.println("\t Qty \t Items \t \t" + " " + "\t Price");
+      System.out.print("\n");
       for(int i =0; i<5; i++)
       {
-         System.out.println("\t" + qty[i] + "\t" + items[i] + "\t" + "\t" + price[i]*qty[i]);//Prints out the amount of items bought, the item name, and the item subtotal
+         System.out.println(" " + "\t" + qty[i] + "\t" + items[i] + "\t" + " " + "$" + String.format("%.2f", price[i]*qty[i]));//Prints out the amount of items bought, the item name, and the item subtotal
          System.out.print("\n");
       }
       System.out.print("\n");
-      System.out.println("\t" + "Subtotal: " + " " +subtotal);
-      System.out.println("\t" + "Tax is: " + " " + subtotal*tax);
-      System.out.println("\t" + "Total is " + " " + total);//Returns total
+      System.out.println( " " + "\t" + "\t" + "\t"+ "\t"+ "Subtotal: " + " " + "$"+ String.format("%.2f", subtotal));
+      System.out.println(" " + "\t" + "\t" + "\t"+ "\t"+ "Tax is: " + " " + "$"+ String.format("%.2f", subtotal*tax));
+      System.out.println(" " + "\t" + "\t" + "\t"+ "\t"+ "Total is " + " " + "$"+ String.format("%.2f", total));//Returns total
 
 
       System.out.print("\t **************************************** ");
