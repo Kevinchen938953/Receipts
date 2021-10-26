@@ -28,8 +28,7 @@ public class Kiosk
 
        double subtotal=0;
         //declare all arrays, tax percentage, and also quantity and items
-       String store = "Walmart";
-       System.out.println("\t Welcome to" + " " + store + "!");
+      
         
 
        for(int x =0; x<5; x++)//Loops the length of the items array. Asks user input five times for item names and stores the responses in the array
